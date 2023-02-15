@@ -1,0 +1,63 @@
+header{
+position: fixed;
+top: 0;
+right: 0;
+left: 0;
+bottom: auto;
+
+
+
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap');
+/* CSS Above This Line is for Google Font Import - Do Not Copy*/
+
+.brand-navigation {
+  background-color: #06070d;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 960px;
+  height: 54px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.navigation a {
+  text-decoration: none;
+  padding: 3em;
+  color: #dbdbe2;
+}
+
+.logo-nav {
+  max-width: 100px;
+}
+
+.button-dark {
+  height: 28x;
+  padding: 1px 20px;
+  border-radius: 4px;
+  background-color: #00e59b;
+  border-style: none;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  color: #FFFFFF;	
+  font-size: 13px;	
+  line-height: 26px;
+}
+.menu-header{
+display: flex;
+justify-content: center;
+}
