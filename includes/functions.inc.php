@@ -64,7 +64,7 @@ function uidexists($conn,$userName,$email){
    if (!mysqli_stmt_prepare($stmt,$sql)) {
     //  mysql prepared statement more secure
 // run the init from the user separeted
-    header("location: ../index.php?error=stmtfailed");
+    header("location: ../register.php?error=stmtfailed");
   exit();
     
 }
@@ -101,7 +101,7 @@ function createUser($conn,$userName,$email,$password){
     $stmt = mysqli_stmt_init($conn);
  //  mysql prepared statement more secure
     if (!mysqli_stmt_prepare($stmt,$sql)) {
-     header("location: ../index.php?error=signfailed");
+     header("location: ../register.php?error=signfailed");
    exit();
     //  encrypt/hash the passoword and return encrypted pass
     // $$hashPassedPass = password_hash($password,PASSWORD_DEFAULT);a
@@ -116,7 +116,7 @@ function createUser($conn,$userName,$email,$password){
     mysqli_stmt_bind_param($stmt,"sss",$userName,$email,$hashPass);   
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../index.php?error=YOU-ARE-REGISTRED");
+    header("location: ../register.php?error=YOU-ARE-REGISTRED");
     exit();
    }
 // ------------------------------
@@ -139,7 +139,7 @@ function createUser($conn,$userName,$email,$password){
 
 //      $userAlreadyExistInDb = uidexists($conn,$userName,$userName);
 //         if ($userAlreadyExistInDb === false) {
-//             header("location: ../index.php?error=wronglogin");
+//             header("location: ../register.php?error=wronglogin");
 //         exit();
 // }
 // // -------------TO BE FIXED ----------------------------------
@@ -148,7 +148,7 @@ function createUser($conn,$userName,$email,$password){
 //         // if these matched return false "notmatch"
 //         $chekPass = password_verify($password,$matchPass);
 //         if ($chekPass === false) {
-//             header("location: ../index.php?error=password-doesnt-match");
+//             header("location: ../register.php?error=password-doesnt-match");
 //             exit();
 //         // ------------------------------------------------------------
 
@@ -157,7 +157,7 @@ function createUser($conn,$userName,$email,$password){
 //         session_start();
 //         $_SESSION["userid"] = $userAlreadyExistInDb["id"];
 //         $_SESSION["username"] = $userAlreadyExistInDb["userName"];
-//         header("location: ../index.php?error=YouSignedIn");
+//         header("location: ../register.php?error=YouSignedIn");
 //         exit();
 
 //         }
