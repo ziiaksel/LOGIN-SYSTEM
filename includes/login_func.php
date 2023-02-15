@@ -42,7 +42,7 @@ if ($user && password_verify($password, $user['userPass'])) {
 //         // if these matched return false "notmatch"
 //         $chekPass = password_verify($password,$matchPass);
 //         if ($chekPass === false) {
-//             header("location: ../register.php?error=password-doesnt-match");
+//             header("location: ../index.php?error=password-doesnt-match");
 //             exit();
 
 // if ($user && password_verify($password, $hashPass)) {
