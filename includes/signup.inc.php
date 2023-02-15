@@ -13,32 +13,32 @@ require_once 'functions.inc.php';
 
 if (emptyInputSignUp($userName,$email,$password)!== false) {
 
-    header("location: ../index.php?error=emptyinput");
+    header("location: ../register.php?error=emptyinput");
     exit();
 }
 
 if (invalidusername($userName)!== false) {
   
-    header("location: ../index.php?error=invalidusernam");
+    header("location: ../register.php?error=invalidusernam");
     exit();
 }
 if (invalidemail($email)!== false) {
-    header("location: ../index.php?error=invalidemail");
+    header("location: ../register.php?error=invalidemail");
     exit();
 } 
 if (invalidpassword($password)!== false) {
-    header("location: ../index.php?error=invalidpassword");
+    header("location: ../register.php?error=invalidpassword");
     exit();
 }
 // check if username already exists
 if (uidexists($conn,$userName,$email)!== false) {
-    header("location: ../index.php?error=usernamealreadytaken");
+    header("location: ../register.php?error=usernamealreadytaken");
    exit();
 }
 createUser($conn,$userName,$email,$password);
 
 } else {
 //if not deny access to it and redirectt to
-    header("location: ../index.php");
+    header("location: ../register.php");
     exit();
 }

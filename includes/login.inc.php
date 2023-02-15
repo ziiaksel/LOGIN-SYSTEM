@@ -15,13 +15,13 @@
 
 // if (emptyInputSignIn($conn,$userName,$password)!== false) {
 
-//     header("location: ../index.php?error=emptyinputlogin");
+//     header("location: ../index.html?error=emptyinputlogin");
 //     exit();
 // }
 
 // loginUser($conn,$userName,$password);
 // }
 // else {
-//     header("location: ../index.php");
+//     header("location: ../index.html");
 //     exit();
 // }

@@ -21,7 +21,7 @@
     header("location: ../user_profile/profile.php");
   } else {
     //user doesn't exist, redirect to login page with an error message
-    header("location: ../index.php?error=Invalid---Login");
+    header("location: ../index.html?error=Invalid---Login");
   }
   
   mysqli_close($conn);
